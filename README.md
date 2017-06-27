@@ -4,6 +4,8 @@ This is the implementation of a phased cache in Verilog, which can be simulated 
 
 The cache was designed and implemented as a part of a course on Computer Architecture.
 
+
+
 Cache size = 512 B
 
 Cache line size = 16 B
@@ -13,12 +15,13 @@ Number of cache lines = 32
 Associativity = 8
 
 
+
 The testbench works on the assumption that the cache holds certain values (a snapshot of the cache) at some point of time.
 
 The 'init' parameters are used to set the values present in the cache at that time.
 
 
-*32-bit physical address*
+## 32-bit physical address
 
 Cache line size = 16B; Offset = 4 bits
 
@@ -32,7 +35,8 @@ Tag = 32 - 4 - 2 = 26 bits
 
 So Tag = 26 bits, Index = 2 bits, Offset = 4 bits.
 
-*Total Cache Size*
+
+## Total cache size
  
 Data = 512B
 
@@ -46,7 +50,9 @@ Counters = 3 x 32 = 12B
 
 So total size = 636B.
 
-*Test cases in the test bench*
+
+
+## Test cases in the test bench
  
 Read hits = 3
 
